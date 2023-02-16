@@ -5,6 +5,8 @@ export default class Search extends Component {
     search = () => {
         const { keyWordNode: { value } } = this //连续解构赋值写法
         console.log(value);
+        //https://api.github.com/search/users?q=atguigu github原接口
+        //axios.get(`https://api.github.com/search/users?q=${value}`)
         //站在3000端口的话向localhost:3000发送都不用写这个，可以忽略掉
         axios.get(`api1/search/users?q=${value}`).then(
             response => {
