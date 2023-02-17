@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import PubSub from 'pubsub-js'
 import axios from 'axios'
-
 export default class Search extends Component {
 
     search = () => {
@@ -9,9 +7,8 @@ export default class Search extends Component {
         // console.log(value);
         // 发送请求钱通知app更新状态
         //发送请求前通知App更新状态
-        // this.props.updateAppState({ isFirst: false, isLoading: true })
-        
-        PubSub.publish('token',{isFirst:false,isLoading:true})
+        this.props.updateAppState({ isFirst: false, isLoading: true })
+
 
 
         //https://api.github.com/search/users?q=atguigu github原接口
@@ -19,12 +16,13 @@ export default class Search extends Component {
         //站在3000端口的话向localhost:3000发送都不用写这个，可以忽略掉
         axios.get(`api1/search/users?q=${values}`).then(
             response => {
-                PubSub.publish('token',{isLoading:false,users:response.data.items})
-                console.log(response.data.items);
+                this.props.updateAppState({ isLoading: false, users: response.data.items })
             },
             error => {
                 // 请求失败后更新app状态
-                PubSub.publish('token',{isLoading:false,err:error.message})
+                this.props.updateAppState({
+                    isLoading: false, err: error.message
+                })
             })
     }
 
