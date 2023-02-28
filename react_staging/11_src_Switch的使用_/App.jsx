@@ -28,8 +28,8 @@ export default class App extends Component {
 							{/* 
 								<NavLink className='list-group-item' to='/about'>about</NavLink>
 								<NavLink className='list-group-item' to='/home'>home</NavLink> */}
-							<MyNavLink to='/atguigu/about'>About</MyNavLink>
-							<MyNavLink to='/atguigu/home'>Home</MyNavLink>
+							<MyNavLink to='/about'>About</MyNavLink>
+							<MyNavLink to='/home'>Home</MyNavLink>
 						</div>
 					</div>
 					<div className="col-xs-6">
@@ -37,9 +37,9 @@ export default class App extends Component {
 							<div className="panel-body">
 								{/* 注册路由 */}
 								<Switch>
-									<Route path='/atguigu/about' component={About}></Route>
-									<Route path='/atguigu/home' component={Home}></Route>
-									<Route path='/atguigu/home' component={Test}></Route>
+									<Route path='/about' component={About}></Route>
+									<Route path='/home' component={Home}></Route>
+									<Route path='/home' component={Test}></Route>
 								</Switch>
 							</div>
 						</div>
