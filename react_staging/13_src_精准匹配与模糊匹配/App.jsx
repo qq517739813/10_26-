@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import About from './pages/About'
 import Home from './pages/Home'
 import Test from './pages/Test'
@@ -29,7 +29,7 @@ export default class App extends Component {
 								<NavLink className='list-group-item' to='/about'>about</NavLink>
 								<NavLink className='list-group-item' to='/home'>home</NavLink> */}
 							<MyNavLink to='/about'>About</MyNavLink>
-							<MyNavLink to='/home'>Home</MyNavLink>
+							<MyNavLink to='/home/a/b'>Home</MyNavLink>
 							<MyNavLink to='/test'>Test</MyNavLink>
 						</div>
 					</div>
@@ -38,10 +38,9 @@ export default class App extends Component {
 							<div className="panel-body">
 								{/* 注册路由 */}
 								<Switch>
-									<Route title='精准匹配的属性' path='/about' component={About}></Route>
-									<Route path='/home' component={Home}></Route>
+									<Route title='精准匹配的属性' exact = {true} path='/about' component={About}></Route>
+									<Route exact = {true} path='/home' component={Home}></Route>
 									<Route path='/test' component={Test}></Route>
-									<Redirect to='/about' />
 								</Switch>
 							</div>
 						</div>
