@@ -19,7 +19,12 @@ export default class Message extends Component {
 						messageArr.map((msgobj) => {
 							return (
 								<li key={msgobj.id} >
+									{/* 向路由组件传递params参数 */}
 									<Link to={`/home/message/detail/${msgobj.id}/${msgobj.title}`}>{msgobj.title}</Link>
+
+									{/* 向路由组件传递search参数 */}
+									{/* <Link to={`/home/message/detail/?id=${msgObj.id}&title=${msgObj.title}`}>{msgObj.title}</Link> */}
+									{/* <Link to={{pathname:'/home/message/detail',state:{id:msgobj.id,title:msgobj.title}}}></Link> */}
 								</li>
 							)
 						})
