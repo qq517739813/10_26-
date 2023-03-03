@@ -41,7 +41,7 @@ export default class App extends Component {
 									<Route title='精准匹配的属性' path='/about' component={About}></Route>
 									<Route path='/home' component={Home}></Route>
 									<Route path='/test' component={Test}></Route>
-									<Redirect to='/about' />
+									<Redirect to='/about' /> 
 								</Switch>
 							</div>
 						</div>

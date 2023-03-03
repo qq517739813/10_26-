@@ -19,7 +19,7 @@ export default class Message extends Component {
 						messageArr.map((msgobj) => {
 							return (
 								<li key={msgobj.id} >
-									<Link to={`/home/message/detail/?id=${msgobj.id}&title=${msgobj.title}`}>{msgobj.title}</Link>
+									<Link to={`/home/message/detail/${msgobj.id}/${msgobj.title}`}>{msgobj.title}</Link>
 								</li>
 							)
 						})
@@ -27,7 +27,7 @@ export default class Message extends Component {
 				</ul>
 				<hr />
 				{/* 注册路由 */}
-				<Route path="/home/message/detail" component={Detail} />
+				<Route path="/home/message/detail/:id/:title" component={Detail} />
 			</div>
 		)
 	}
