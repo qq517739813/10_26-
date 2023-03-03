@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import qs from 'querystring'
+// import qs from 'querystring'
 
 
 const DetailData = [
