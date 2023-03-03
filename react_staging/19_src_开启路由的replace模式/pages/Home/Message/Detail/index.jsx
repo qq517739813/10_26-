@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import qs from 'querystring'
 
 
 const DetailData = [
@@ -13,7 +12,6 @@ export default class Detail extends Component {
     console.log(this.props);
     // 接收params参数
     // const {id,title} = this.props.match.params 
-    // console.log(id,title);
 
     // 接收search参数
     // const {search} = this.props.location
@@ -27,6 +25,7 @@ export default class Detail extends Component {
     }) || {}
     return (
       <ul>
+        123
         <li>ID:{id}</li>
         <li>TITLE:{title}</li>
         <li>CONTENT:{findResult.content}</li>
