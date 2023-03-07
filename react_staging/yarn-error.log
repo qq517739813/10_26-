@@ -1,0 +1,77 @@
+Arguments: 
+  C:\company\develop_tools\nodejs\node.exe C:\Users\admin\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add andt
+
+PATH: 
+  C:\Program Files\Common Files\Oracle\Java\javapath;C:\company\develop_tools\VMware\VMware Workstation\bin\;C:\company\develop_tools\Java\jdk1.8.0_301\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\company\develop_tools\nodejs\;C:\company\develop_tools\Python27;C:\company\develop_tools\Git\cmd;C:\company\develop_tools\VMware\Xftp 7\;C:\company\develop_tools\VMware\Xshell 7\;C:\Program Files (x86)\EasyShare\x86\;C:\Program Files (x86)\EasyShare\x64\;C:\Program Files\Microsoft VS Code\bin;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;;C:\company\develop_tools\JetBrains\IntelliJ IDEA 2020.3.4\bin;;C:\Users\admin\AppData\Roaming\npm;C:\Users\admin\AppData\Local\Programs\Microsoft VS Code\bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  14.18.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/andt: Not found
+      at Request.params.callback [as _callback] (C:\Users\admin\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66145:18)
+      at Request.self.callback (C:\Users\admin\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140890:22)
+      at Request.emit (events.js:400:28)
+      at Request.<anonymous> (C:\Users\admin\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141862:10)
+      at Request.emit (events.js:400:28)
+      at IncomingMessage.<anonymous> (C:\Users\admin\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141784:12)
+      at Object.onceWrapper (events.js:519:28)
+      at IncomingMessage.emit (events.js:412:35)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+
+npm manifest: 
+  {
+    "name": "react_staging",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@testing-library/jest-dom": "^5.16.5",
+      "@testing-library/react": "^13.4.0",
+      "@testing-library/user-event": "^13.5.0",
+      "axios": "^1.3.2",
+      "pubsub-js": "^1.9.4",
+      "querystring": "^0.2.1",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-router-dom": "^5.3.4",
+      "react-scripts": "5.0.1",
+      "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
