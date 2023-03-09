@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
-
+import store from '../../redux/store'
 export default class Count extends Component {
 
-  state = { count: 0 }
+  state = {carName:'奔驰c63'}
 
   increment = () => {
     const { value } = this.selectNumber
-    const { count } = this.state
-    this.setState({ count: count + value * 1 })
+    // const { count } = this.state
+    // this.setState({ count: count + value * 1 })
+    store.dispatch({type:'decrement', data:value*1})
   }
 
   decrement = () => {
