@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import store from '../../redux/store'
-import { createIncrementAction,createDecrementAction } from '../../redux/count_action';
+import { createIncrementAction,
+  createDecrementAction,
+  createIncrementAsyncAction } from '../../redux/count_action';
 export default class Count extends Component {
 
   state = {carName:'奔驰c63'}
 
   increment = ()=>{
 		const {value} = this.selectNumber
-		store.dispatch(createIncrementAction(value *1))
+		store.dispatch(createIncrementAction(value *1,5000))
     // this.forceUpdate() 
 	}
 
@@ -30,10 +32,10 @@ export default class Count extends Component {
 
   incrementAsync = () => {
     const { value } = this.selectNumber
-    const  count  = store.getState()
-    setTimeout(() => {
-      store.dispatch(createIncrementAction(value *1))
-    }, 2000);
+    // const  count  = store.getState()
+    // setTimeout(() => {
+      store.dispatch(createIncrementAsyncAction(value *1,2000))
+    // }, 5000);
   }
 
   render() {
